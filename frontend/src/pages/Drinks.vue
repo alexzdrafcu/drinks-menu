@@ -12,7 +12,7 @@
         <q-card-section avatar class="q-pa-xs">
           <q-avatar class="avatar" size="110px">
             <img
-              src="https://www.acouplecooks.com/wp-content/uploads/2020/04/Martini-003.jpg"
+              :src="drink.image"
             />
           </q-avatar>
         </q-card-section>

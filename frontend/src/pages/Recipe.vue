@@ -1,5 +1,5 @@
 <template>
-  <div class="recipe-page">
+  <div class="recipe-page" :style="{backgroundImage:'url(' + drink?.image + ')'}">
     <!-- <div class="image"></div>
     <q-img
       src="https://www.acouplecooks.com/wp-content/uploads/2020/04/Martini-003.jpg"
@@ -105,7 +105,7 @@ export default defineComponent({
   font-family: "Raleway", sans-serif;
   height: 500px;
   background-image: url("https://www.acouplecooks.com/wp-content/uploads/2020/04/Martini-003.jpg");
-  background-color: #cccccc; /* Used if the image is unavailable */
+  background-color: #ffffff; /* Used if the image is unavailable */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
