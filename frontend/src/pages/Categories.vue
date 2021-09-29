@@ -2,19 +2,19 @@
   <div class="categories">
     <div class="text-h3 text-bold q-mx-lg q-my-xl">Meniu</div>
     <div class="cards row items-center justify-center q-gutter-md">
-      <q-card class="card column">
+      <q-card clickable @click="router.push('/categories/nucocktailuri')" class="card column">
         <q-img class="col-9" src="../assets/nu-cocktails.png" fit="none" />
         <p class="col text-body2 text-bold text-center">NU COCKTAILURI</p>
       </q-card>
-      <q-card class="card column">
+      <q-card clickable @click="router.push('/categories/shoturi')" class="card column">
         <q-img class="col-9" src="../assets/shots.png" fit="none" />
         <p class="col text-body2 text-bold text-center">SHOTURI</p>
       </q-card>
-      <q-card class="card column">
+      <q-card clickable @click="router.push('/categories/longdrinks')" class="card column">
         <q-img class="col-9" src="../assets/long-drinks.png" fit="none" />
         <p class="col text-body2 text-bold text-center">LONG DRINKS</p>
       </q-card>
-      <q-card class="card column">
+      <q-card clickable @click="router.push('/categories/cocktailuri')" class="card column">
         <q-img class="col-9" src="../assets/cocktails.png" fit="none" />
         <p class="col text-body2 text-bold text-center">COCKTAILURI</p>
       </q-card>
@@ -27,11 +27,16 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
+import {useRouter} from "vue-router";
 
 export default defineComponent({
   name: "PageCategories",
   setup() {
-    return {};
+    let router = useRouter();
+   
+    return {
+        router,
+        };
   },
 });
 </script>

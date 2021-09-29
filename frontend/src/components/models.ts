@@ -1,8 +1,21 @@
-export interface Todo {
+export interface Drink {
   id: number;
-  content: string;
+  image: string;
+  name: string;
+  description: string;
+  category: number;
 }
 
-export interface Meta {
-  totalCount: number;
+export interface Ingredient {
+  id: number;
+  quantity: string;
+  name: string;
+  drink: number;
+}
+
+export interface Step {
+  id: number;
+  name: string;
+  description: string;
+  drink: number;
 }
