@@ -6,7 +6,7 @@
         v-for="drink in drinks"
         :key="drink.id"
         clickable
-        @click="fct"
+        @click="router.push('/drink/' + drink.id)"
         class="card row q-pb-md"
       >
         <q-card-section avatar class="q-pa-xs">
@@ -21,54 +21,6 @@
           <div class="uppercase text-h5 text-bold">{{ drink.name }}</div>
           <div class="text-body2 text-weight-medium q-mt-xs">
             {{ drink.description }}
-          </div>
-        </q-card-section>
-      </q-card>
-      <q-card clickable @click="fct" class="card row q-pb-md">
-        <q-card-section avatar class="q-pa-xs">
-          <q-avatar class="avatar" size="110px">
-            <img
-              src="https://www.acouplecooks.com/wp-content/uploads/2020/04/Martini-003.jpg"
-            />
-          </q-avatar>
-        </q-card-section>
-
-        <q-card-section class="col q-px-sm">
-          <div class="uppercase text-h5 text-bold">DRY MARTINI</div>
-          <div class="text-body2 text-weight-medium q-mt-xs">
-            Extreme Strong (30%)
-          </div>
-        </q-card-section>
-      </q-card>
-            <q-card clickable @click="fct" class="card row q-pb-md">
-        <q-card-section avatar class="q-pa-xs">
-          <q-avatar class="avatar" size="110px">
-            <img
-              src="https://www.acouplecooks.com/wp-content/uploads/2020/04/Martini-003.jpg"
-            />
-          </q-avatar>
-        </q-card-section>
-
-        <q-card-section class="col q-px-sm">
-          <div class="uppercase text-h5 text-bold">DRY MARTINI</div>
-          <div class="text-body2 text-weight-medium q-mt-xs">
-            Extreme Strong (30%)
-          </div>
-        </q-card-section>
-      </q-card>
-            <q-card clickable @click="router.push('/drink')" class="card row q-pb-md">
-        <q-card-section avatar class="q-pa-xs">
-          <q-avatar class="avatar" size="110px">
-            <img
-              src="https://www.acouplecooks.com/wp-content/uploads/2020/04/Martini-003.jpg"
-            />
-          </q-avatar>
-        </q-card-section>
-
-        <q-card-section class="col q-px-sm">
-          <div class="uppercase text-h5 text-bold">DRY MARTINI</div>
-          <div class="text-body2 text-weight-medium q-mt-xs">
-            Extreme Strong (30%)
           </div>
         </q-card-section>
       </q-card>
@@ -101,6 +53,18 @@ export default defineComponent({
       );
       const data: Drink[] = await response.json();
       drinks.value = data;
+      drinks.value.sort((a: Drink, b: Drink) => {
+        let fa = a.name.toLowerCase(),
+          fb = b.name.toLowerCase();
+
+        if (fa < fb) {
+          return -1;
+        }
+        if (fa > fb) {
+          return 1;
+        }
+        return 0;
+      });
     };
     onMounted(async () => {
       category.value = router.currentRoute.value.path.toString().split("/")[2];
