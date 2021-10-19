@@ -12,7 +12,7 @@
       </q-card>
       <q-card clickable @click="router.push('/categories/longdrinks')" class="card column">
         <q-img class="col-9" src="../assets/long-drinks.png" fit="none" />
-        <p class="col text-body2 text-bold text-center">LONG DRINKS</p>
+        <p class="col text-body2 text-bold text-center">MOCKTAILURI</p>
       </q-card>
       <q-card clickable @click="router.push('/categories/cocktailuri')" class="card column">
         <q-img class="col-9" src="../assets/cocktails.png" fit="none" />

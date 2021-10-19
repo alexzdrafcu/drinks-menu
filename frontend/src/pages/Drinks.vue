@@ -1,5 +1,5 @@
 <template>
-  <div class="categories">
+  <div class="categories q-mb-md">
     <div class="text-h3 text-bold q-mx-lg q-my-lg q-py-sm">{{ title }}</div>
     <div class="cards row items-center justify-center q-gutter-md">
       <q-card
