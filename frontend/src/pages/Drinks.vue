@@ -1,27 +1,29 @@
 <template>
-  <div class="categories q-mb-md">
-    <div class="text-h3 text-bold q-mx-lg q-my-lg q-py-sm">{{ title }}</div>
-    <div class="cards row items-center justify-center q-gutter-md">
-      <q-card
-        v-for="drink in drinks"
-        :key="drink.id"
-        clickable
-        @click="router.push('/drink/' + drink.id)"
-        class="card row q-pb-md"
-      >
-        <q-card-section avatar class="q-pa-xs">
-          <q-avatar class="avatar" size="110px">
-            <img :src="drink.image" />
-          </q-avatar>
-        </q-card-section>
+  <div class="drinks column items-center window-height">
+    <div style="max-width: 600px">
+      <div class="text-h3 text-bold q-mx-lg q-my-lg q-py-sm">{{ title }}</div>
+      <div class="cards row items-center justify-center q-gutter-md">
+        <q-card
+          v-for="drink in drinks"
+          :key="drink.id"
+          clickable
+          @click="router.push('/drink/' + drink.id)"
+          class="card row q-pb-md"
+        >
+          <q-card-section avatar class="q-pa-xs">
+            <q-avatar class="avatar" size="110px">
+              <img :src="drink.image" />
+            </q-avatar>
+          </q-card-section>
 
-        <q-card-section class="col q-px-sm">
-          <div class="uppercase text-h5 text-bold">{{ drink.name }}</div>
-          <div class="text-body2 text-weight-medium q-mt-xs">
-            {{ drink.description }}
-          </div>
-        </q-card-section>
-      </q-card>
+          <q-card-section class="col q-px-sm">
+            <div class="uppercase text-h5 text-bold">{{ drink.name }}</div>
+            <div class="text-body2 text-weight-medium q-mt-xs">
+              {{ drink.description }}
+            </div>
+          </q-card-section>
+        </q-card>
+      </div>
     </div>
   </div>
 </template>
@@ -99,9 +101,20 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
-.categories {
+.drinks {
   font-family: "Raleway", sans-serif;
 }
+
+.title {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.card-label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
 .card {
   width: 90%;
   max-width: 380px;
