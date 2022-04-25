@@ -51,6 +51,7 @@
           <q-img
             class="col-9"
             src="../assets/category_beer_and_wine.svg"
+            fit="none"
             :ratio="1"
           />
           <p class="card-label text-center">BEER&WINE</p>
@@ -63,8 +64,7 @@
           <q-img
             class="col-9"
             src="../assets/category_coffee_and_tea.svg"
-            fit="none"
-            :ratio="1"
+            width="70px"
 
           />
           <p class="card-label text-center">COFFEE&TEA</p>
