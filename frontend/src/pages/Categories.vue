@@ -8,7 +8,7 @@
           @click="router.push('/categories/nucocktailuri')"
           class="card column"
         >
-          <q-img class="col-9" src="../assets/category_new.svg" :ratio="1" />
+          <q-img class="col-9" src="../assets/category_new.svg" fit="none" />
           <p class="card-label text-center">NEW</p>
         </q-card>
         <q-card
@@ -19,7 +19,7 @@
           <q-img
             class="col-9"
             src="../assets/category_soft_drinks.svg"
-            :ratio="1"
+            fit="none"
           />
           <p class="card-label text-center">SOFT DRINKS</p>
         </q-card>
@@ -28,7 +28,7 @@
           @click="router.push('/categories/longdrinks')"
           class="card column"
         >
-          <q-img class="col-9" src="../assets/category_shots.svg" :ratio="1" />
+          <q-img class="col-9" src="../assets/category_shots.svg" fit="none" />
           <p class="card-label text-center">SHOTS</p>
         </q-card>
         <q-card
@@ -39,7 +39,7 @@
           <q-img
             class="col-9"
             src="../assets/category_cocktails.svg"
-            :ratio="1"
+            fit="none"
           />
           <p class="card-label text-center">COCKTAILS</p>
         </q-card>
@@ -52,7 +52,6 @@
             class="col-9"
             src="../assets/category_beer_and_wine.svg"
             fit="none"
-            :ratio="1"
           />
           <p class="card-label text-center">BEER&WINE</p>
         </q-card>
@@ -64,8 +63,7 @@
           <q-img
             class="col-9"
             src="../assets/category_coffee_and_tea.svg"
-            width="70px"
-
+            fit="none"
           />
           <p class="card-label text-center">COFFEE&TEA</p>
         </q-card>
