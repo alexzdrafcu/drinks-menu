@@ -15,19 +15,27 @@ const routes: RouteRecordRaw[] = [
     component: () => import("pages/Categories.vue"),
   },
   {
-    path: "/categories/cocktailuri",
+    path: "/categories/new",
     component: () => import("pages/Drinks.vue"),
   },
   {
-    path: "/categories/nucocktailuri",
+    path: "/categories/softdrinks",
     component: () => import("pages/Drinks.vue"),
   },
   {
-    path: "/categories/shoturi",
+    path: "/categories/shots",
     component: () => import("pages/Drinks.vue"),
   },
   {
-    path: "/categories/longdrinks",
+    path: "/categories/cocktails",
+    component: () => import("pages/Drinks.vue"),
+  },
+  {
+    path: "/categories/beerandwine",
+    component: () => import("pages/Drinks.vue"),
+  },
+  {
+    path: "/categories/coffeeandtea",
     component: () => import("pages/Drinks.vue"),
   },
   {

@@ -1,6 +1,6 @@
 <template>
   <div class="drinks column items-center window-height">
-    <div style="width:100%; max-width: 600px">
+    <div style="width: 100%; max-width: 600px">
       <div class="text-h3 title q-mx-md q-my-lg">{{ title }}</div>
       <div class="row items-center justify-center q-gutter-md">
         <q-card
@@ -70,20 +70,28 @@ export default defineComponent({
       category.value = router.currentRoute.value.path.toString().split("/")[2];
 
       switch (category.value) {
-        case "nucocktailuri":
-          title.value = "Nu Cocktailuri";
+        case "new":
+          title.value = "New";
           categoryid.value = 1;
           break;
-        case "shoturi":
-          title.value = "Shoturi";
+        case "softdrinks":
+          title.value = "Soft drinks";
           categoryid.value = 2;
           break;
-        case "longdrinks":
-          title.value = "Long drinks";
+        case "shots":
+          title.value = "Shots";
           categoryid.value = 3;
           break;
-        case "cocktailuri":
-          title.value = "Cocktailuri";
+        case "cocktails":
+          title.value = "Cocktails";
+          categoryid.value = 4;
+          break;
+        case "beerandwine":
+          title.value = "Beer&Wine";
+          categoryid.value = 4;
+          break;
+        case "coffeeandtea":
+          title.value = "Coffee&Tea";
           categoryid.value = 4;
           break;
       }

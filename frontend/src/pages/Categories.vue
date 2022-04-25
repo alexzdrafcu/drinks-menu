@@ -1,11 +1,11 @@
 <template>
   <div class="categories column items-center window-height">
-    <div style="width:100%; max-width: 600px">
+    <div style="width: 100%; max-width: 600px">
       <div class="text-h3 title q-mx-lg q-my-lg">Menu</div>
       <div class="row items-center justify-center q-gutter-md">
         <q-card
           clickable
-          @click="router.push('/categories/nucocktailuri')"
+          @click="router.push('/categories/new')"
           class="card column"
         >
           <q-img class="col-9" src="../assets/category_new.svg" fit="none" />
@@ -13,7 +13,7 @@
         </q-card>
         <q-card
           clickable
-          @click="router.push('/categories/shoturi')"
+          @click="router.push('/categories/softdrinks')"
           class="card column"
         >
           <q-img
@@ -25,7 +25,7 @@
         </q-card>
         <q-card
           clickable
-          @click="router.push('/categories/longdrinks')"
+          @click="router.push('/categories/shots')"
           class="card column"
         >
           <q-img class="col-9" src="../assets/category_shots.svg" fit="none" />
@@ -33,7 +33,7 @@
         </q-card>
         <q-card
           clickable
-          @click="router.push('/categories/cocktailuri')"
+          @click="router.push('/categories/cocktails')"
           class="card column"
         >
           <q-img
@@ -45,7 +45,7 @@
         </q-card>
         <q-card
           clickable
-          @click="router.push('/categories/cocktailuri')"
+          @click="router.push('/categories/beerandwine')"
           class="card column"
         >
           <q-img
@@ -57,7 +57,7 @@
         </q-card>
         <q-card
           clickable
-          @click="router.push('/categories/cocktailuri')"
+          @click="router.push('/categories/coffeeandtea')"
           class="card column"
         >
           <q-img

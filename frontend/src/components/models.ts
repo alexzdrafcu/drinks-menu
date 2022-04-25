@@ -19,3 +19,12 @@ export interface Step {
   description: string;
   drink: number;
 }
+
+export enum Categories {
+  New = "New",
+  SoftDrinks = "Soft Drinks",
+  Shots = "Shots",
+  Cocktails = "Cocktails",
+  BeerAndWine = "Beer&Wine",
+  CoffeeAndTea = "Coffee&Tea",
+}
