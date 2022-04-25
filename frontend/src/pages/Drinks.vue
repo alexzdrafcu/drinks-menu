@@ -11,9 +11,7 @@
       >
         <q-card-section avatar class="q-pa-xs">
           <q-avatar class="avatar" size="110px">
-            <img
-              :src="drink.image"
-            />
+            <img :src="drink.image" />
           </q-avatar>
         </q-card-section>
 
