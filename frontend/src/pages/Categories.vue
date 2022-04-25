@@ -1,8 +1,8 @@
 <template>
-  <div class="column items-center window-height">
-    <div style="max-width: 600px">
-      <div class="text-h3 title q-mx-lg q-my-xl">Menu</div>
-      <div class="cards row items-center justify-center q-gutter-md">
+  <div class="categories column items-center window-height">
+    <div style="width:100%; max-width: 600px">
+      <div class="text-h3 title q-mx-lg q-my-lg">Menu</div>
+      <div class="row items-center justify-center q-gutter-md">
         <q-card
           clickable
           @click="router.push('/categories/nucocktailuri')"
@@ -90,6 +90,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+
 .categories {
   font-family: "Raleway", sans-serif;
 }

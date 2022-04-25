@@ -1,8 +1,8 @@
 <template>
   <div class="drinks column items-center window-height">
-    <div style="max-width: 600px">
-      <div class="text-h3 text-bold q-mx-lg q-my-lg q-py-sm">{{ title }}</div>
-      <div class="cards row items-center justify-center q-gutter-md">
+    <div style="width:100%; max-width: 600px">
+      <div class="text-h3 title q-mx-md q-my-lg">{{ title }}</div>
+      <div class="row items-center justify-center q-gutter-md">
         <q-card
           v-for="drink in drinks"
           :key="drink.id"
